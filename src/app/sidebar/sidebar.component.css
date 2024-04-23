@@ -1,0 +1,32 @@
+@media (min-width: 640px) and (max-width: 768px) {
+  #separator-sidebar {
+    width: 15rem;
+  }
+}
+
+.active {
+  background-color: rgb(95, 94, 94);
+  border-radius: 6px;
+  color: white;
+}
+svg{
+  width: 5vh;
+}
+.characterSelection{
+  background-color: #1e494f;
+  border: none;
+  width: 100%;
+}
+select.characterSelection option{
+  font-size: larger;
+}
+.sidebar{
+  background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 20px;
+    height: 90vh;
+    margin-left: 3vh;
+    margin-top: 3vh;
+    box-shadow: 13px 1px 53px -8px rgba(0, 0, 0, 0.75);
+}

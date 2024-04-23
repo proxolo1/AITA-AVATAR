@@ -1,0 +1,29 @@
+#mainChatContainer {
+  height: 90vh;
+  overflow-y: scroll;
+}
+.fa-copy:hover {
+color: blue;
+}
+.align-middle{
+  padding-top: 10px;
+}
+button{
+  cursor: pointer;
+}
+.avatar{
+  position: absolute;
+  z-index: 9999;
+  bottom: 16vh;
+  right: 5vh;
+  width: 5vh;
+  height: 5vh;
+  background-size: contain;
+  border-radius: 3vh;
+  background: url(../../../assets/img/icons8-avatar-48.png);
+  cursor: pointer;
+  background-position: center;
+}
+#chat-content-container{
+  background: linear-gradient(22deg, #05343c, #013f45c7);
+}

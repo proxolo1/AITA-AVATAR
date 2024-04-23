@@ -1,0 +1,93 @@
+{
+	"name": "AI",
+	"version": "1.0.0",
+	"scripts": {
+		"ng": "ng",
+		"start": "concurrently \"npm run start-avatar\" \"npm run start-python\" \"npm run start-angular\"",
+		"install": "concurrently \" npm run install-angular\" \" npm run install-python\" \" npm run install-avatar\"",
+		"install-angular": "npm i",
+		"install-avatar": "cd AITA AVATAR && npm i",
+		"install-python": "pip install -r python/requirements.txt",
+		"start-python": "python python/app.py",
+		"start-angular": "ng serve",
+		"start-avatar": "cd AITA AVATAR && npm start",
+		"build": "ng build",
+		"watch": "ng build --watch --configuration development",
+		"test": "ng test"
+	},
+	"private": true,
+	"dependencies": {
+		"@angular/animations": "^14.3.0",
+		"@angular/cdk": "^13.3.9",
+		"@angular/common": "^14.3.0",
+		"@angular/compiler": "^14.3.0",
+		"@angular/core": "^14.3.0",
+		"@angular/fire": "^7.5.0",
+		"@angular/forms": "^14.3.0",
+		"@angular/material": "^13.3.9",
+		"@angular/platform-browser": "^14.3.0",
+		"@angular/platform-browser-dynamic": "^14.3.0",
+		"@angular/router": "^14.3.0",
+		"@ngrx/effects": "^14.3.0",
+		"@ngrx/entity": "^14.3.0",
+		"@ngrx/router-store": "^14.3.0",
+		"@ngrx/store": "^14.3.0",
+		"@ngrx/store-devtools": "^14.3.0",
+		"flowbite": "^1.6.5",
+		"html-to-text": "^9.0.5",
+		"marked": "^4.3.0",
+		"ng-process-env": "^15.0.1",
+		"ngx-markdown": "^14.0.1",
+		"ngx-toastr": "^15.2.2",
+		"openai": "^3.2.1",
+		"rxjs": "^7.5.0",
+		"tslib": "^2.3.0",
+		"uuidv4": "^6.2.13",
+		"zone.js": "~0.11.4"
+	},
+	"devDependencies": {
+		"@angular-devkit/build-angular": "^14.2.13",
+		"@angular/cli": "^14.2.13",
+		"@angular/compiler-cli": "^14.3.0",
+		"@google/generative-ai": "^0.2.1",
+		"@tailwindcss/typography": "^0.5.9",
+		"@types/html-to-text": "^9.0.4",
+		"@types/jasmine": "~3.10.0",
+		"@types/marked": "^4.0.8",
+		"@types/node": "^12.11.1",
+		"autoprefixer": "^10.4.13",
+		"concurrently": "^8.2.2",
+		"jasmine-core": "~3.10.0",
+		"karma": "~6.3.0",
+		"karma-chrome-launcher": "~3.1.0",
+		"karma-coverage": "~2.0.3",
+		"karma-jasmine": "~4.0.0",
+		"karma-jasmine-html-reporter": "~1.7.0",
+		"postcss": "^8.4.31",
+		"tailwindcss": "^3.2.7",
+		"typescript": "~4.8.4"
+	},
+	"Resources": {
+		"Table": {
+			"Type": "AWS::DynamoDB::Table",
+			"Properties": {
+				"AttributeDefinitions": [
+					{
+						"AttributeName": "id",
+						"AttributeType": "S"
+					}
+				],
+				"BillingMode": "PAY_PER_REQUEST",
+				"KeySchema": [
+					{
+						"AttributeName": "id",
+						"KeyType": "HASH"
+					}
+				],
+				"StreamSpecification": {
+					"StreamViewType": "NEW_AND_OLD_IMAGES"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>register</title>
+  </head>
+  <body>
+    <div class="login-container">
+      <form class="login-form" #signupForm="ngForm" (ngSubmit)="login()">
+        <h2>login</h2>
+        <input type="email" name="email" placeholder="email" required #email="ngModel" [(ngModel)]="loginData.email">
+        <input type="password" placeholder="Password" required #password="ngModel" [(ngModel)]="loginData.password">
+        <button class="bg-black text-white font-bold py-2 px-4 rounded disabled:opacity-50"
+        type="submit" [disabled]="signupForm.invalid ">submit</button>
+        <p>
+          dont have account? <a href="/signup">Click here</a>
+          </p>
+      </form>
+    </div>
+  </body>
+</html>

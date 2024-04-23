@@ -1,0 +1,4 @@
+<div class="overflow-hidden w-full h-full relative">
+  <app-sidebar (callParentFunction) = "parentFunction($event)" (addNewChatFunction)="newChat($event)" [history]="chatHistory" (updateCharacter)="updateCharacter($event)"></app-sidebar>
+  <app-chat-content [chatHistory]="chatHistory" [messages]="messages" (title)="addTitle($event)" [geminiConfig]="geminiConfig"></app-chat-content>
+</div>
