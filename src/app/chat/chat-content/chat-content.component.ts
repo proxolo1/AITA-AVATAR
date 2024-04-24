@@ -87,6 +87,7 @@ export class ChatContentComponent
             </a>`,
           };
           this.messages.push(responseMessage)
+          localStorage.setItem(`chatHistory`, JSON.stringify(this.chatHistory))
         })
       })
       localStorage.setItem(`chatHistory`, JSON.stringify(this.chatHistory))
